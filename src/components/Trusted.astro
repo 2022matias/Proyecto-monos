@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+
+import trusted from "../assets/img/trusted.svg";
+import elipse from "../assets/img/trusted-elipse.svg"
+---
+
+<section class="relative flex items-center w-fullpy-10 h-screen">
+    <div
+    class="flex flex-col-reverse md:flex-row items-center gap-4 m-auto max-w-fit"
+    >
+        <div class="flex-shrink-0">
+            <Image src={trusted} alt="betslip" class="rounded-md shadow-md" />
+        </div>
+        <div class="flex flex-col items-start max-w-md text-left p-4">
+            <h2 class="text-yellow font-bold text-5xl">TRUSTED</h2>
+
+            <p class="text-white text-xl md:mt-4 mt-2 leading-8">
+                BetSell guarantees the authenticity of its listings by verifying tickets directly with the sportsbook source. Securely trade without providing personal or sensitive information. BetSell ensures seamless distribution of your purchase, smooth payment and transfer of your asset to its new owner, and assurance of the ticket payout.
+            </p>
+        </div>
+    </div>
+    <Image src={elipse} alt="elipse" class="absolute -z-50 right-0" />
+</section>

@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+
+import betslip from "../assets/img/betslip.webp";
+import elipse from "../assets/img/betslip-elipse.svg"
+---
+
+<section class="flex items-center w-fullpy-10 h-screen">
+    <div
+        class:list={[
+            "flex flex-col-reverse md:flex-row items-center gap-4 m-auto max-w-fit",
+        ]}
+    >
+        <div class="flex-shrink-0">
+            <Image src={betslip} alt="betslip" class="rounded-md shadow-md" />
+        </div>
+        <div class="flex flex-col items-start max-w-md text-left p-4">
+            <h2 class="font-daciaBold title-gradient">MAKING THE INTANGIBLE TANGIBLE</h2>
+
+            <p class="font-inter text-white text-xl md:mt-4 mt-2">
+                BetSell leverages blockchain technology to provide a globally
+                trusted hub where users and sportsbooks buy, sell and auction
+                bets as digitally certified assets.
+            </p>
+        </div>
+    </div>
+    <Image src={elipse} alt="elipse" class="absolute -z-50 right-0" />
+</section>
+
+<style>
+    .title-gradient {
+        font-size: 3rem;
+        font-weight: bold;
+        background: linear-gradient(to bottom, white, #ffd700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        white-space: pre-line;
+    }
+</style>

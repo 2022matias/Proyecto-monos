@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+
+import elipse from "../assets/img/ownership-elipse.svg"
+import ownership from "../assets/img/ownership.webp";
+---
+
+<section class="flex items-center w-fullpy-10 h-screen">
+    <div
+        class="flex flex-col-reverse md:flex-row-reverse items-center gap-4 m-auto max-w-fit"
+    >
+        <div class="flex-shrink-0">
+            <Image src={ownership} alt="betslip" class="rounded-md shadow-md" />
+        </div>
+        <div class="flex flex-col items-start max-w-md text-left p-4">
+            <h2 class="text-yellow font-bold text-5xl">OWNERSHIP</h2>
+
+            <p class="text-white text-xl md:mt-4 mt-2 leading-8">
+                Transform your bet into a digitally certified ticket, securely
+                stored in your personal wallet linked to your email. This
+                ensures a unique, irreplicable version of your bet and provides
+                you with exclusive rights and undeniable proof of ownership.
+            </p>
+        </div>
+    </div>
+    <Image src={elipse} alt="elipse" class="absolute -z-50 left-0" />
+</section>
