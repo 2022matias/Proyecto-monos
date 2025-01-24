@@ -1,0 +1,55 @@
+---
+import diamond from "../assets/img/diamond.svg"
+import diamond2 from "../assets/img/diamond-2.svg"
+import cube from "../assets/img/ion_cube.svg"
+import market from "../assets/img/market.svg"
+import money from "../assets/img/money-bag.svg"
+import ticket from "../assets/img/ticket.svg"
+import Card from "./Card.astro"
+
+const info = [ 
+    {
+        icon: diamond,
+        title: "Capitalize on improved odds",
+        description: 'Unlock the value of the future bets with better than market odds'
+    },
+    {
+        icon: diamond2,
+        title: "Capitalize on improved odds",
+        description: 'Unlock the value of the future bets with better than market odds'
+    },
+    {
+        icon: cube,
+        title: "Capitalize on improved odds",
+        description: 'Unlock the value of the future bets with better than market odds'
+    },
+    {
+        icon: market,
+        title: "Capitalize on improved odds",
+        description: 'Unlock the value of the future bets with better than market odds'
+    },
+    {
+        icon: money,
+        title: "Capitalize on improved odds",
+        description: 'Unlock the value of the future bets with better than market odds'
+    },
+    {
+        icon: ticket,
+        title: "Capitalize on improved odds",
+        description: 'Unlock the value of the future bets with better than market odds'
+    },
+]
+---
+
+<section class="max-w-7xl m-auto ">
+    <h2
+        class="text-white font-daciaBold md:text-5xl text-[2rem] whitespace-pre-line max-w-4xl"
+    >
+        WHY <span class="text-yellow">CONVERT</span> YOUR BETS INTO DIGITAL CERTIFIED TICKETS?
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 m-auto md:mt-12">
+        {info.map((item) => (
+          <Card src={item.icon} title={item.title} description={item.description} />
+        ))}
+      </div>
+</section>
