@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+
+import elipse from "../assets/img/ownership-elipse.svg"
+import world from "../assets/img/world.svg"
+---
+
+<section class="flex items-center justify-end w-full h-screen">
+    <div class="flex flex-col justify-between md:flex-row items-center gap-8">
+        <div class="w-2/5">
+            <Image src={world} alt="betslip" class="max-h-[80vh] rounded-md shadow-md" />
+        </div>
+        <div class="flex flex-col items-start text-left p-4 w-2/5 mr-40 gap-8">
+            <h2 class="font-daciaBold font-bold text-5xl">
+                <span class="text-white">YOUR BETS ARE NOW</span> <span class="text-yellow">ACCESSIBLE</span> 
+                <span class="text-white">TO PLAYERS</span> <span class="text-yellow">WORLDWIDE</span>
+            </h2>                  
+            <p class="text-white font-inter font-normal text-xl">Discover a vast array of betting options across a wide range of sporting events. BetSell makes bet trading easy and secure. Whether you're aiming for a guaranteed win or looking to seize incredible deals and opportunities, this will redefine your gaming experience.</p>
+        </div>
+    </div>
+    <Image src={elipse} alt="elipse" class="absolute -z-50 left-0" />
+</section>
