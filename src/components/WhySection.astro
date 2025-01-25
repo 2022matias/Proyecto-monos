@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets"
+import elipse from "../assets/img/why-elipse.svg"
+import diamond from "../assets/img/diamond.svg"
+import diamond2 from "../assets/img/diamond-2.svg"
+import cube from "../assets/img/ion_cube.svg"
+import market from "../assets/img/market.svg"
+import money from "../assets/img/money-bag.svg"
+import ticket from "../assets/img/ticket.svg"
+import Card from "./Card.astro"
+
+const info = [ 
+    {
+        icon: diamond,
+        title: "Easy Process",
+        description: 'Seamlessly transform your bets into certified NFTs with a single click. BetSell’s partnerships with trusted sportsbooks ensure your bets become unique, transferable digital assets.'
+    },
+    {
+        icon: diamond2,
+        title: "Secure",
+        description: 'BetSell guarantees the authenticity of every NFT through blockchain verification and trusted sportsbook certification. You maintain full control over your assets and payments, with no holdings or interference from BetSell.'
+    },
+    {
+        icon: cube,
+        title: "Privacy",
+        description: 'Trade safely and anonymously with no personal information required. Your crypto wallet serves as your unique identifier, ensuring your privacy in a secure Web3 ecosystem.'
+    },
+    {
+        icon: market,
+        title: "Global Market",
+        description: 'BetSell simplifies trading by handling the technological complexities, allowing users to focus on securely and easily trading their assets with players worldwide.'
+    },
+    {
+        icon: money,
+        title: "Trusted",
+        description: 'All Betsell digital certified tickets are supported by liquidity pools, ensuring the payout of winning tickets and the secure allocation of funds to ticket holders.'
+    },
+]
+---
+
+<section class="relative m-auto md:min-h-[936px] grid border border-red-500 py-10">
+    <div class="border border-blue-600 max-h-fit m-auto">
+        <h2 class="text-white font-daciaBold font-bold md:text-5xl text-[2rem] whitespace-pre-line leading[140%]"> <span class="text-yellow">WHY USE BETSELL?</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 md:gap-y-14 m-auto md:mt-12">
+            {info.map((item) => (
+              <Card src={item.icon} title={item.title} description={item.description} />
+            ))}
+          </div>
+    </div>
+    <Image src={elipse} alt="elipse" class="absolute -z-50 right-0" />
+<section/>

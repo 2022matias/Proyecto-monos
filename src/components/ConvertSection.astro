@@ -1,6 +1,6 @@
 ---
 import diamond from "../assets/img/diamond.svg"
-import diamond2 from "../assets/img/diamond-2.svg"
+import blockchain from "../assets/img/blockchain.svg"
 import cube from "../assets/img/ion_cube.svg"
 import market from "../assets/img/market.svg"
 import money from "../assets/img/money-bag.svg"
@@ -9,47 +9,48 @@ import Card from "./Card.astro"
 
 const info = [ 
     {
-        icon: diamond,
-        title: "Capitalize on improved odds",
-        description: 'Unlock the value of the future bets with better than market odds'
-    },
-    {
-        icon: diamond2,
-        title: "Capitalize on improved odds",
-        description: 'Unlock the value of the future bets with better than market odds'
-    },
-    {
-        icon: cube,
-        title: "Capitalize on improved odds",
-        description: 'Unlock the value of the future bets with better than market odds'
-    },
-    {
-        icon: market,
-        title: "Capitalize on improved odds",
-        description: 'Unlock the value of the future bets with better than market odds'
-    },
-    {
-        icon: money,
-        title: "Capitalize on improved odds",
-        description: 'Unlock the value of the future bets with better than market odds'
-    },
-    {
         icon: ticket,
         title: "Capitalize on improved odds",
         description: 'Unlock the value of the future bets with better than market odds'
     },
+    {
+        icon: blockchain,
+        title: "Maximize Almost Win Parlays",
+        description: 'Turn near wins into tangible opportunities.'
+    },
+    {
+        icon: money,
+        title: "Secure Guaranteed Wins",
+        description: 'Cash out early without heavy sportsbook penalties.'
+    },
+    {
+        icon: diamond,
+        title: "Access exclusive bet opportunities",
+        description: 'Unlock the value of the future bets with better than market odds'
+    },
+    {
+        icon: market,
+        title: "Leverage Favorable Market Changes",
+        description: 'Benefit when market odds swing in your favor.'
+    },
+    {
+        icon: cube,
+        title: "Free up Account balances",
+        description: 'Sell bets at a discount to get out of your current stake.'
+    },
 ]
 ---
 
-<section class="max-w-7xl m-auto ">
-    <h2
-        class="text-white font-daciaBold md:text-5xl text-[2rem] whitespace-pre-line max-w-4xl"
-    >
-        WHY <span class="text-yellow">CONVERT</span> YOUR BETS INTO DIGITAL CERTIFIED TICKETS?
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 m-auto md:mt-12">
-        {info.map((item) => (
-          <Card src={item.icon} title={item.title} description={item.description} />
-        ))}
-      </div>
-</section>
+<section class="max-w-7xl m-auto md:min-h-[936px] grid border border-red-500 py-10">
+    <div class="border border-blue-600 max-h-fit m-auto">
+        <h2 class="text-white font-daciaBold font-bold md:text-5xl text-[2rem] whitespace-pre-line leading[140%]">WHY <span class="text-yellow">CONVERT</span> YOUR BETS
+            INTO DIGITAL CERTIFIED TICKETS?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 md:gap-y-14 m-auto md:mt-12">
+            {info.map((item) => (
+              <Card src={item.icon} title={item.title} description={item.description} />
+            ))}
+          </div>
+        
+    </div>
+</>

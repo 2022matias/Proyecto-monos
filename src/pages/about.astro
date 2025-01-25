@@ -3,43 +3,46 @@ import { Image } from "astro:assets";
 
 import Layout from "../layouts/Layout.astro";
 import elipse from "../assets/img/about-elipse.svg"
-import Card from "../components/Card.astro";
 import ConvertSection from "../components/ConvertSection.astro";
+import WhySection from "../components/WhySection.astro";
 ---
 
 <Layout>
-    <section class="max-w-7xl m-auto">
-        <h2 class="text-white font-daciaBold md:text-5xl text-[2rem] whitespace-pre-line">CONNECTING USERS, SECURING TRADES,
-            <span class="text-yellow">GLOBALIZING SPORTSBOOKS</span>
-        </h2>
-        <div class="md:mt-24 mt-7 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">
-            <div>
-                <h3 class="font-daciaBold md:text-[2rem] text-2xl text-white">
-                    OUR MISSION
-                </h3>
-                <p class="text-white font-inter md:text-base text-sm">
-                    To connect bettors and sportsbooks by offering innovative ways
-                    to engage with sports betting, create new revenue streams, and
-                    provide decentralized and secure experiences for users and
-                    operators worldwide.
-                </p>
-            </div>
-            <div>
-                <h3 class="font-daciaBold md:text-[2rem] text-2xl text-white">
-                    OUR VISION
-                </h3>
-                <p class="text-white font-inter md:text-base text-sm">
-                    To transform gaming for bettors and sportsbooks by building a
-                    decentralized global marketplace. Our platform will empower users
-                    by providing innovative ways to hedge, sell, and discover bets with
-                    greater value, while offering sportsbooks a unique new venue to
-                    reach and engage a worldwide audience with exclusive and
-                    unconventional betting options through seamlessly integrated
-                    technologies on Web3.
-                </p>
+    <section class="max-w-7xl m-auto md:min-h-[936px] grid border border-red-500 py-10">
+        <div class="border border-blue-600 max-h-fit m-auto">
+            <h2 class="text-white font-daciaBold font-bold md:text-5xl text-[2rem] whitespace-pre-line leading[140%]">CONNECTING USERS, SECURING TRADES,
+                <span class="text-yellow">GLOBALIZING SPORTSBOOKS</span>
+            </h2>
+            <div class="md:mt-24 mt-7 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">
+                <div class="max-w-lg">
+                    <h3 class="font-daciaBold font-bold md:text-[2rem] text-2xl text-white">
+                        OUR MISSION
+                    </h3>
+                    <p class="text-white font-inter md:text-base text-sm md:mt-4 mt-2 leading-5 md:leading-6">
+                        To connect bettors and sportsbooks by offering innovative ways
+                        to engage with sports betting, create new revenue streams, and
+                        provide decentralized and secure experiences for users and
+                        operators worldwide.
+                    </p>
+                </div>
+                <div class="max-w-lg">
+                    <h3 class="font-daciaBold font-bold md:text-[2rem] text-2xl text-white">
+                        OUR VISION
+                    </h3>
+                    <p class="text-white font-inter md:text-base text-sm md:mt-4 mt-2 leading-5 md:leading-6">
+                        To transform gaming for bettors and sportsbooks by building a
+                        decentralized global marketplace. Our platform will empower users
+                        by providing innovative ways to hedge, sell, and discover bets with
+                        greater value, while offering sportsbooks a unique new venue to
+                        reach and engage a worldwide audience with exclusive and
+                        unconventional betting options through seamlessly integrated
+                        technologies on Web3.
+                    </p>
+                </div>
             </div>
         </div>
-        <Image src={elipse} alt="elipse" class="absolute -z-50 right-0 top-0 left-0" />
+        <Image src={elipse} alt="elipse" class="absolute -z-50 left-0 top-0" />
     </section>
     <ConvertSection />
+    <WhySection />
 </Layout>
