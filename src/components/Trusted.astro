@@ -3,9 +3,10 @@ import { Image } from "astro:assets";
 
 import trusted from "../assets/img/trusted.svg";
 import elipse from "../assets/img/trusted-elipse.svg"
+import monkey3 from "../assets/img/Monkey-col-3.svg";
 ---
 
-<section class="relative flex items-center w-fullpy-10 h-screen">
+<section class="relative flex items-center w-full py-10 h-screen">
     <div
     class="flex flex-col-reverse md:flex-row items-center gap-4 m-auto max-w-fit"
     >
@@ -22,3 +23,4 @@ import elipse from "../assets/img/trusted-elipse.svg"
     </div>
     <Image src={elipse} alt="elipse" class="absolute -z-50 right-0" />
 </section>
+<Image src={monkey3} alt="monos" class="h-full object-cover absolute right-0"/>

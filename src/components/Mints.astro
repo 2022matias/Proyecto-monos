@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+
+import Iphone from "../assets/img/Iphone12.svg";
+import elipse from "../assets/img/ownership-elipse.svg"
+---
+
+<section class="flex items-center w-full h-screen bg-black relative z-40">
+    <div
+        class="flex flex-col md:flex-row-reverse items-center gap-4 m-auto max-w-fit"
+    >
+    <div class="flex flex-col items-start max-w-md text-left p-4">
+        <h2 class="text-yellow font-daciaBold font-bold text-5xl">MINTS</h2>      
+        <p class="text-white font-inter font-normal text-2xl">Secondary Selling Market</p>
+        <p class="text-yellow font-inter font-normal text-2xl">Bettors Sell to Bettors</p>
+        <p class="text-white font-inter font-normal text-xl">Users can convert their pending sportsbook tickets into digitally certified tickets for trading on BetSell.</p>
+    </div>
+    <div class="flex-shrink-0">
+        <Image src={Iphone} alt="betslip" class="h-[70vh] rounded-md shadow-md relative z-50" />
+    </div>
+    </div>
+    <Image src={elipse} alt="elipse" class="absolute z-40 rigth-0" />
+</section>
