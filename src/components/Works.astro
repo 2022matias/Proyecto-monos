@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+
+import elipse from "../assets/img/ellipse-work.svg";
+import work1 from "../assets/img/work1.svg";
+import work2 from "../assets/img/work2.svg";
+import work3 from "../assets/img/work3.svg";
+import work4 from "../assets/img/work4.svg";
+---
+
+<section class=" h-[1147px] bg-yellow">
+    <div class="flex flex-col justify-center h-full items-center relative z-20">
+        <div class=" h-4/5 flex flex-col items-center gap-5">
+
+            <div class="w-3/4 flex flex-col">
+                <h2 class="font-daciaBold text-5xl leading-[67.2px]">HOW IT WORKS</h2>
+                <p class="font-inter text-[20px]">Designed for seamless use by sportsbook users of all levels.</p>
+            </div>
+            <div class="w-3/4 h-[67%] flex flex-row justify-start flex-wrap gap-4">
+                <Image src={work1} alt="how it works1" class="w-[48%] h-auto object-contain min-w-[300px]" />
+                <Image src={work2} alt="how it works2" class="w-[48%] h-auto object-contain min-w-[300px]" />
+                <Image src={work3} alt="how it works3" class="w-[48%] h-auto object-contain min-w-[300px]" />
+                <Image src={work4} alt="how it works4" class="w-[48%] h-auto object-contain min-w-[300px]" />
+            </div>
+
+        </div>
+    </div>
+    <Image src={elipse} alt="elipse" class="relative z-10 top-[-1105px]" />
+</section>
