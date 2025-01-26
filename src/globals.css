@@ -32,3 +32,19 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.title{
+  @apply font-daciaBold font-bold text-white max-w-fit whitespace-pre-line uppercase
+}
+
+.subtitle{
+  @apply font-inter font-normal text-white 
+}
+
+.title-sections{
+ @apply md:text-5xl md:leading-[67px] text-[2rem] leading-[45px]
+}
+
+.description {
+@apply md:text-xl md:leading-8 text-base leading-[22px] md:mt-4 mt-2
+}
