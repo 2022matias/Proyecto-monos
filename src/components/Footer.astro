@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+
+import logo from "../assets/img/footer-logo.svg";
+import linkedin from "../assets/img/LinkedIn.svg";
+import twitter from "../assets/img/Twitter.svg";
+import elipse from "../assets/img/footer-ellipse.svg";
+---
+
+<section class="h-[505px] bg-yellow">
+    <div class="h-full py-20 px-32 flex flex-col justify-between relative z-20">       
+            <Image src={logo} alt="logo" class="" />
+            <div class="w-full h-[1px] bg-[#000000A3]"></div>
+            <div class="flex flex-row justify-between h-[133px]">
+                <div class="flex flex-col justify-between">
+                    <p class="font-inter font-medium text-xl">Join the community</p>
+                    <div class="flex flex-row justify-between">
+                        <Image src={linkedin} alt="logo de LinkedIn" class="w-20 h-20 rounded-xl" />
+                        <Image src={twitter} alt="logo de Twitter" class="w-20 h-20 rounded-xl" />
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <p class="font-inter font-medium text-xl">Want to join us?</p>
+                    <div class="flex flex-row">
+                        <button class="font-inter font-medium text-[22px] bg-[#121212] text-white p-2.5 rounded-[8px] whitespace-nowrap">Contact founders</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <Image src={elipse} alt="elipse" class="relative z-10 top-[-505px]" />
+</section>
+
