@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets"
+import elipse from "../assets/img/why-elipse.svg"
+import users2 from "../assets/img/icon-2users-group-yellow.svg"
+import users3 from "../assets/img/icon-3users-group-yellow.svg"
+import controller from "../assets/img/icon-game-controller-yellow.svg"
+import cubes from "../assets/img/icon-game-cubes-yellow.svg"
+import cash from "../assets/img/icon-game-cash-yellow.svg"
+import globe from "../assets/img/icon-globe-yellow.svg"
+import Card from "./Card.astro"
+
+const info = [ 
+    {
+        icon: users2,
+        title: "Break Regional Barriers",
+        description: 'Gain global exposure and extend your brand’s visibility and operations beyond local or regional limits.'
+    },
+    {
+        icon: users3,
+        title: "Your Gaming Web3 Partner",
+        description: 'BetSell’s gaming operations expertise and Web3 specialists will seamlessly guide your sportsbook into the blockchain future.'
+    },
+    {
+        icon: controller,
+        title: "Access a Crypto Audience",
+        description: 'Expand your reach to a growing global community of crypto bettors.'
+    },
+    {
+        icon: cubes,
+        title: "Offer an Innovative Cashout Alternative",
+        description: 'Give players a unique way to cash out their bets while generating revenue from secondary ticket market sales.'
+    },
+    {
+        icon: cash,
+        title: "Attract New Users",
+        description: 'Showcase your tickets to a wider audience, driving interest and acquiring new customers eager to mint or redeem tickets from your sportsbook.'
+    },
+    {
+        icon: globe,
+        title: "A New Way to Engage Users",
+        description: 'NFT-based tickets unlock endless opportunities for innovative loyalty programs and marketing strategies.'
+    },
+]
+---
+
+<section class="relative m-auto md:min-h-[936px] grid border border-red-500 py-10">
+    <div class="border border-blue-600 max-h-fit m-auto">
+        <h2 class="text-white font-daciaBold font-bold md:text-5xl text-[2rem] whitespace-pre-line leading[140%]"> <span class="text-yellow">BOOST YOUR SPORTSBOOK’S POTENTIAL WITH US</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 md:gap-y-14 m-auto md:mt-12">
+            {info.map((item) => (
+              <Card src={item.icon} title={item.title} description={item.description} />
+            ))}
+          </div>
+    </div>
+    <Image src={elipse} alt="elipse" class="absolute -z-50 right-0" />
+<section/>
