@@ -1,55 +1,83 @@
 ---
-import { Image } from "astro:assets"
-import elipse from "../assets/img/why-elipse.svg"
-import diamond from "../assets/img/diamond.svg"
-import diamond2 from "../assets/img/diamond-2.svg"
-import cube from "../assets/img/ion_cube.svg"
-import market from "../assets/img/market.svg"
-import money from "../assets/img/money-bag.svg"
-import ticket from "../assets/img/ticket.svg"
-import Card from "./Card.astro"
+import { Image } from "astro:assets";
+import elipse from "../assets/img/ellipse-tangible.svg";
+import tangible from "../assets/img/icon-tangible.svg";
+import ownership from "../assets/img/icon-ownership.svg";
+import transparency from "../assets/img/icon-transparency.svg";
+import market from "../assets/img/icon-market.svg";
+import exclusivity from "../assets/img/icon-exclusivity.svg";
+import integration from "../assets/img/icon-integration.svg";
+import Card from "./Card.astro";
 
-const info = [ 
+const info = [
     {
-        icon: diamond,
-        title: "Easy Process",
-        description: 'Seamlessly transform your bets into certified NFTs with a single click. BetSell’s partnerships with trusted sportsbooks ensure your bets become unique, transferable digital assets.'
+        icon: tangible,
+        title: "Tangible value",
+        description:
+            "Instead of a traditional physical bet slip or centralized digital bet, BetSell provides a unique digital asset that can be bought, sold, and traded worldwide.",
     },
     {
-        icon: diamond2,
-        title: "Secure",
-        description: 'BetSell guarantees the authenticity of every NFT through blockchain verification and trusted sportsbook certification. You maintain full control over your assets and payments, with no holdings or interference from BetSell.'
+        icon: ownership,
+        title: "Ownership & Provenance",
+        description:
+            "With each NFT digital ticket representing a specific bet, you have a verifiable record of your wager, giving it authenticity and increasing its value as a tradable asset.",
     },
     {
-        icon: cube,
-        title: "Privacy",
-        description: 'Trade safely and anonymously with no personal information required. Your crypto wallet serves as your unique identifier, ensuring your privacy in a secure Web3 ecosystem.'
+        icon: transparency,
+        title: "Transparency & Verification",
+        description:
+            "The immutable nature of blockchain ensures that the details and performance of your bets can be tracked and verified by anyone, fostering trust and confidence in the authenticity of your digital ticket.",
     },
     {
         icon: market,
-        title: "Global Market",
-        description: 'BetSell simplifies trading by handling the technological complexities, allowing users to focus on securely and easily trading their assets with players worldwide.'
+        title: "Open Market Opportunities",
+        description:
+            "By minting your sports bets as digital certified tickets, you gain access to a global marketplace of gamblers. This opens up opportunities to sell your bets, potentially generating instant revenue.",
     },
     {
-        icon: money,
-        title: "Trusted",
-        description: 'All Betsell digital certified tickets are supported by liquidity pools, ensuring the payout of winning tickets and the secure allocation of funds to ticket holders.'
+        icon: exclusivity,
+        title: "Exclusivity",
+        description:
+            "NFTs introduce a new level of scarcity and exclusivity to bets, making them more valuable and appealing to gamblers who appreciate market opportunities.",
     },
-]
+    {
+        icon: integration,
+        title: "Integration of Technology",
+        description:
+            "Merging sports betting with blockchain technology through NFTs keeps you at the forefront of industry trends, appealing to tech-savvy individuals and showcasing your willingness to explore new possibilities.",
+    },
+];
 ---
 
-<section class="relative bg-yellow w-full m-auto md:min-h-[936px] grid border border-red-500 py-10">
-    <div class="border border-blue-600 max-h-fit m-auto">
+<section class="relative bg-yellow w-full m-auto md:min-h-[936px] grid py-10">
+    <div class="max-h-fit m-auto z-20">
         <div class="max-w-[757px]">
-            <h2 class="text-black font-daciaBold font-bold md:text-5xl text-[2rem] whitespace-pre-line leading[140%]">ADDING TANGIBLE VALUE TO YOUR BETTING ASSETS</h2>
-            <p class="text-black inter text-[20px]">Transforming a bet into an NFT-based digital ticket opens up new avenues for engagement, revenue generation, and interactions within the sports betting community.</p>
-
+            <h2
+                class="text-black font-daciaBold font-bold md:text-5xl text-[2rem] leading[140%]"
+            >
+                ADDING TANGIBLE VALUE TO YOUR BETTING ASSETS
+            </h2>
+            <p class="text-black inter text-[20px]">
+                Transforming a bet into an NFT-based digital ticket opens up new
+                avenues for engagement, revenue generation, and interactions
+                within the sports betting community.
+            </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 md:gap-y-14 m-auto md:mt-12">
-            {info.map((item) => (
-              <Card src={item.icon} title={item.title} description={item.description} border black />
-            ))}
-          </div>
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 md:gap-y-14 m-auto md:mt-12"
+        >
+            {
+                info.map((item) => (
+                    <Card
+                        src={item.icon}
+                        title={item.title}
+                        description={item.description}
+                        border
+                        black
+                    />
+                ))
+            }
+        </div>
     </div>
-
+    <Image src={elipse} class="absolute" alt="elipse" />
 </section>
