@@ -1,21 +1,40 @@
 ---
 import { Image } from "astro:assets";
 
-import elipse from "../assets/img/ownership-elipse.svg"
-import football from "../assets/img/american-football.webp"
+import elipse from "../assets/img/ownership-elipse.svg";
+import football from "../assets/img/american-football.webp";
 ---
 
-<section class="relative flex items-center justify-end w-full h-auto md:py-40 py-10">
-    <div class="flex flex-col justify-between md:flex-row items-center max-w-fit m-auto">
-        <div class="flex flex-col items-start max-w-md text-left p-4">
-            <h2 class="text-yellow font-daciaBold font-bold max-w-fit whitespace-pre-line uppercase md:text-5xl md:leading-[67px] text-[2rem] leading-[45px]">SHOPS</h2>      
-            <p class="text-white font-inter font-normal md:text-2xl md:leading-8 text-base leading-6">Primary Selling Market</p>
-            <p class="text-yellow font-inter font-normal md:text-2xl md:leading-8 text-base leading-6">Sportsbooks Sell to Bettors</p>
-            <p class="font-inter font-normal text-white md:text-xl md:leading-8 text-base leading-[22px] md:mt-4 mt-2">Exclusive betting picks offered directly by sportsbooks, including ticket drops such as bundles and limited time deals.</p>
-        </div>
-        <div class="w-1/2 self-center">
-            <Image src={football} alt="Bet Sell" class="w-full" />
+<section class="relative flex flex-row m-auto w-full h-auto md:py-40 py-10">
+    <div class="w-1/2 flex justify-center">
+        <div class="flex flex-col m-auto max-w-md text-left p-4">
+            <h2
+                class="text-yellow font-daciaBold font-bold max-w-fit uppercase md:text-5xl md:leading-[67px] text-[2rem] leading-[45px]"
+            >
+                SHOPS
+            </h2>
+            <p
+                class="text-white font-inter font-normal md:text-2xl md:leading-8 text-base leading-6"
+            >
+                Primary Selling Market
+            </p>
+            <p
+                class="text-yellow font-inter font-normal md:text-2xl md:leading-8 text-base leading-6"
+            >
+                Sportsbooks Sell to Bettors
+            </p>
+            <p
+                class="font-inter font-normal text-white md:text-xl md:leading-8 text-base leading-[22px] md:mt-4 mt-2"
+            >
+                Exclusive betting picks offered directly by sportsbooks,
+                including ticket drops such as bundles and limited time deals.
+            </p>
         </div>
     </div>
-    <Image src={elipse} alt="elipse" class="absolute -z-50 left-0" />
+
+    <div class="w-1/2 self-center">
+        <Image src={football} alt="A laptop with bet sell web app" class="w-full 2xl:max-w-[1280px]" />
+    </div>
+
+    <Image src={elipse} alt="elipse" class="absolute -z-50 left-0 top-0" />
 </section>
