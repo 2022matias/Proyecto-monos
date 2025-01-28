@@ -2,19 +2,19 @@
 import { Image } from "astro:assets";
 
 import elipse from "../assets/img/ownership-elipse.svg"
-import football from "../assets/img/american-football.svg"
+import football from "../assets/img/american-football.webp"
 ---
 
-<section class="flex items-center justify-end w-full h-screen">
-    <div class="flex flex-col justify-between md:flex-row items-center gap-8 max-w-fit">
+<section class="relative flex items-center justify-end w-full h-auto md:py-40 py-10">
+    <div class="flex flex-col justify-between md:flex-row items-center max-w-fit m-auto">
         <div class="flex flex-col items-start max-w-md text-left p-4">
-            <h2 class="text-yellow font-daciaBold font-bold text-white max-w-fit whitespace-pre-line uppercase md:text-5xl md:leading-[67px] text-[2rem] leading-[45px]">SHOPS</h2>      
+            <h2 class="text-yellow font-daciaBold font-bold max-w-fit whitespace-pre-line uppercase md:text-5xl md:leading-[67px] text-[2rem] leading-[45px]">SHOPS</h2>      
             <p class="text-white font-inter font-normal md:text-2xl md:leading-8 text-base leading-6">Primary Selling Market</p>
             <p class="text-yellow font-inter font-normal md:text-2xl md:leading-8 text-base leading-6">Sportsbooks Sell to Bettors</p>
             <p class="font-inter font-normal text-white md:text-xl md:leading-8 text-base leading-[22px] md:mt-4 mt-2">Exclusive betting picks offered directly by sportsbooks, including ticket drops such as bundles and limited time deals.</p>
         </div>
-        <div class="flex-shrink-0 ml-auto">
-            <Image src={football} alt="betslip" class="vh-[70vh] rounded-md shadow-md" />
+        <div class="w-1/2 self-center">
+            <Image src={football} alt="Bet Sell" class="w-full" />
         </div>
     </div>
     <Image src={elipse} alt="elipse" class="absolute -z-50 left-0" />

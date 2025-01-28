@@ -2,10 +2,10 @@
 import { Image } from "astro:assets";
 
 import betslip from "../assets/img/betslip.webp";
-import elipse from "../assets/img/betslip-elipse.svg"
+import elipse from "../assets/img/betslip-elipse.svg";
 ---
 
-<section class="flex items-center w-full py-10 h-screen">
+<section class="flex items-center w-full h-auto md:py-40 py-10">
     <div
         class:list={[
             "flex flex-col-reverse md:flex-row items-center gap-4 m-auto max-w-fit",
@@ -15,9 +15,14 @@ import elipse from "../assets/img/betslip-elipse.svg"
             <Image src={betslip} alt="betslip" class="rounded-md shadow-md" />
         </div>
         <div class="flex flex-col items-start max-w-md text-left p-4">
-            <h2 class="font-daciaBold font-bold text-white max-w-fit whitespace-pre-line uppercase md:text-xl md:leading-8 text-base leading-[22px] md:mt-4 mt-2 title-gradient">MAKING THE INTANGIBLE TANGIBLE</h2>
+            <h2
+                class="font-daciaBold font-bold text-white max-w-fit whitespace-pre-line uppercase md:text-xl md:leading-[4rem] text-base leading-[22px] md:mt-4 mt-2 title-gradient"
+            >MAKING THE INTANGIBLE TANGIBLE
+            </h2>
 
-            <p class="font-inter font-normal text-white md:text-xl md:leading-8 text-base leading-[22px] md:mt-4 mt-2">
+            <p
+                class="font-inter font-normal text-white md:text-xl md:leading-8 text-base leading-[22px] md:mt-4 mt-2"
+            >
                 BetSell leverages blockchain technology to provide a globally
                 trusted hub where users and sportsbooks buy, sell and auction
                 bets as digitally certified assets.
