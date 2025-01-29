@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
 
-import HeroDesktop from "../assets/img/hero.webp";
-import elipse from "../assets/img/hero-elipse.svg";
+import HeroDesktop from "../assets/img/hero-hd.webp";
+import elipse from "../assets/img/ellipse-hero.svg";
 ---
 
 <section class="relative flex flex-row m-auto h-screen w-full">
@@ -26,5 +26,5 @@ import elipse from "../assets/img/hero-elipse.svg";
         <div class="w-1/2 self-center">
             <Image src={HeroDesktop} alt="Bet Sell" class="w-full" />
         </div>
-    <Image src={elipse} alt="elipse" class="absolute -z-50 left-0 -top-48" />
+    <Image src={elipse} alt="elipse" class="absolute -z-50 -left-48 -top-48" />
 </section>

@@ -8,11 +8,9 @@ import elipse from "../assets/img/footer-ellipse.svg";
 ---
 
 <section class="relative h-[505px] bg-yellow">
-    <div class="h-full py-20 px-32 flex flex-col justify-between z-20">
-        <Image src={logo} alt="logo" class="" />
-        <div class="w-full h-[1px] bg-[#000000A3]"></div>
-        <div class="flex flex-row justify-between h-[133px]">
-            <div class="flex flex-col justify-between">
+    <div class="h-full py-20 px-32 flex flex-col justify-between z-10">
+        <div class="flex flex-row justify-between h-[133px] py-10">
+            <div class="flex flex-col justify-between gap-2">
                 <p
                     class="font-inter font-medium md:text-xl md:leading-8 text-base leading-[22px]"
                 >
@@ -31,7 +29,7 @@ import elipse from "../assets/img/footer-ellipse.svg";
                     />
                 </div>
             </div>
-            <div class="flex flex-col justify-between">
+            <div class="flex flex-col justify-between gap-2">
                 <p
                     class="font-inter font-medium md:text-xl md:leading-8 text-base leading-[22px]"
                 >
@@ -45,6 +43,10 @@ import elipse from "../assets/img/footer-ellipse.svg";
                 </div>
             </div>
         </div>
+        
+        <div class="w-full h-[1px] bg-[#000000A3] my-10"></div>
+        
+        <Image src={logo} alt="logo" class="mx-auto" />
     </div>
-    <Image src={elipse} alt="elipse" class="absolute top-0" />
+    <Image src={elipse} alt="elipse" class="absolute top-0 -z-10" />
 </section>

@@ -9,15 +9,17 @@ import ConnectionSection from "../components/ConnectionSection.astro";
 ---
 
 <Layout>
-    <section class=" max-w[1440px] w-4/5 mx-auto">
-        <ConnectionSection />
-        <ConvertSection />
-        <WhySection />
-        <div class="relative">
-            <div class="absolute inset-0 bg-yellow -z-10 w-screen left-1/2 -translate-x-1/2 h-full"></div>
-            <TangibleSection />
+    <section class="w-full">
+        <div class="max-w[1440px] w-4/5 mx-auto">
+            <ConnectionSection />
+            <ConvertSection />
+            <WhySection />
+            <div class="relative">
+                <div class="absolute inset-0 bg-yellow -z-10 w-screen left-1/2 -translate-x-1/2 h-full"></div>
+                <TangibleSection />
+            </div>
+            <BoostSection />
+            <FounderSection />
         </div>
-        <BoostSection />
-        <FounderSection />
     </section>
 </Layout>

@@ -2,10 +2,10 @@
 import { Image } from "astro:assets";
 
 import monkey3 from "../assets/img/monkeys.png";
-import elipse1 from "../assets/img/elipse-yellow.svg";
+import elipse1 from "../assets/img/ellipse-monkeys.svg";
 ---
 
-<section class="relative bg-yellow w-full h-auto md:my-40 my-10 flex">
+<section class="relative bg-yellow w-full h-auto flex">
     <div class="flex relative w-full justify-between z-40">
         <div class="flex flex-col justify-center ml-7 w-2/3 max-w-[65rem]">
             <h2 class="font-daciaBold text-[60px]">
@@ -29,6 +29,6 @@ import elipse1 from "../assets/img/elipse-yellow.svg";
                 class="w-full h-full object-fit right-0"
             />
         </div>
-        <Image src={elipse1} alt="elipse" class="absolute right-0 -z-10" />
+        <Image src={elipse1} alt="elipse" class="absolute right-0 -z-10 bottom-0 top-0 " />
     </div>
 </section>
