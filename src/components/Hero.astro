@@ -2,30 +2,32 @@
 import { Image } from "astro:assets";
 
 import HeroDesktop from "../assets/img/hero.webp";
-import HeroHD from "../assets/img/hero-hd.webp";
 import elipse from "../assets/img/ellipse-hero.svg";
+import elipseMobile from "../assets/img/ellipse-hero-sm.svg";
 ---
 
-<section class="relative flex md:flex-row m-auto h-screen w-full">
-        <div class="w-1/2 flex justify-center">
-            <div class="w-4/5 max-w-xl text-left my-auto flex flex-col">
-                <h1
-                class="font-daciaBold font-bold text-white max-w-fit whitespace-pre-line uppercase lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3rem] text-[1.5rem] leading-[2rem] lg:leading-[3rem] xl:leading-[3.125rem] 2xl:leading-[5.625rem]" style="letter-spacing: -0.02em;"
-                >The global <br class="hidden md:block">hub for <span class="text-yellow">bet <br class="hidden md:block"> trading</span>
-            </h1>
-            <p class="font-inter font-normal text-white text-sm leading-[1.5rem] md:text-base lg:text-lg xl:text-xl md:leading-8 md:mt-4 mt-2">
-                Transform your bets into unique digital assets and securely trade
-                them worldwide on the BetSell Marketplace.
-            </p>
-            <a
-                href="/marketplace"
-                class="bg-yellow text-black p-4 rounded-xl font-bold max-w-fit m-auto mt-5 md:hidden"
-                >Go to Marketplace</a
-            >
-            </div>
+<section class="max-w-[1440px] relative m-auto h-auto md:pt-[35px] md:pb-[119px] overflow-hidden md:overflow-visible md:pl-20">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-10 md:gap-0">
+        <div class="text-center md:text-left my-auto flex flex-col max-w-[570px] md:gap-4 gap-3 px-5 md:px-0">
+            <h1
+            class="font-daciaRegular font-bold text-white text-[40px] leading-[49px] md:text-7xl uppercase md:leading-[124%] whitespace-pre-line" style="letter-spacing: -0.02em;"
+            >The global
+            hub for <span class="text-yellow">bet
+            trading</span></h1>
+        <p class="font-inter font-normal text-sm leading-[22px] md:text-xl text-white md:leading-8 max-w-[281px] md:max-w-fit m-auto">
+            Transform your bets into unique digital assets and securely trade
+            them worldwide on the BetSell Marketplace.
+        </p>
+        <a
+            href="/marketplace"
+            class="font-inter font-semibold text-base leading-5 bg-yellow text-black p-4 rounded-lg max-w-fit m-auto md:hidden"
+            >Go to Marketplace</a
+        >
         </div>
-        <div class="w-1/2 self-center relative">
-            <Image src={HeroDesktop} alt="Bet Sell" class="w-full" />
+        <div class="self-center relative">
+            <Image src={HeroDesktop} alt="Bet Sell" class="max-h-[616px] ml-[18px] md:ml-0" />
         </div>
-    <Image src={elipse} alt="elipse" class="absolute -z-50 -left-48 -top-48" />
+    </div>
+    <Image src={elipse} alt="elipse" class="hidden md:block absolute md:-z-50 md:-left-48 md:-top-48 top-0" />
+    <Image src={elipseMobile} alt="elipse" class="block absolute md:hidden -z-10 bottom-0" />
 </section>
