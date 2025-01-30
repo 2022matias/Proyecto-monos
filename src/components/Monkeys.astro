@@ -5,22 +5,23 @@ import monkey3 from "../assets/img/monkeys.png";
 import elipse1 from "../assets/img/ellipse-monkeys.svg";
 ---
 
-<section class="relative bg-yellow w-full h-auto flex">
-    <div class="flex relative max-w-[1440px] m-auto w-full justify-between z-40 md:min-h-[898px]">
-        <div class="flex flex-col justify-center ml-7 max-w-[678px]">
-            <h2 class="font-daciaRegular font-black md:text-[60px] md:leading-[140%]" style="letter-spacing: -0.02em;">
+<section class="relative bg-yellow flex items-center w-full max-h-[598px] md:max-h-full overflow-hidden md:h-auto md:py-0 py-10">
+    <div class="flex md:flex-row flex-col relative max-w-[1440px] m-auto w-full justify-between z-40 md:min-h-[898px] gap-5">
+        <div class="flex flex-col justify-center md:ml-7 max-w-[353px] md:max-w-[678px] gap-4 pl-2 ">
+            <h2 class="font-daciaRegular font-black md:text-[60px] md:leading-[140%] text-[32px] leading-[140%]" style="letter-spacing: -0.02em;">
                 BETSELL.IO <br />THE MARKETPLACE
             </h2>
-            <p class="font-inter md:text-xl md:leading-8 md:max-w-[586px] text-justify">
+            <p class="font-inter md:text-xl md:leading-8 md:max-w-[586px] text-sm leading[22px] text-justify">
                 Explore a wide range of appealing bets in our marketplace,
                 designed to securely trade your stake while guaranteeing the
                 legitimacy of your purchase, the privacy of your exchange
                 transaction, and the assurance of the ticket payout.
             </p>
-            <button
-                class="bg-[#212121] text-white w-fit px-2.5 py-2.5 font-inter font-semibold rounded-[10px] mt-6"
-                >Go to marketplace</button
-            >
+            <a
+            href="/marketplace"
+            class="font-inter font-semibold md:text-lg md:leading-5 md:mt-2 text-sm bg-[#212121] text-white p-4 rounded-lg max-w-fit"
+            >Go to Marketplace</a
+        >
         </div>
         <div class="">
             <Image

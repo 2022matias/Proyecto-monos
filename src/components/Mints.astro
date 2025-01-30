@@ -5,19 +5,22 @@ import Iphone from "../assets/img/Iphone12.svg";
 import elipse from "../assets/img/ellipse-mints.svg"
 ---
 
-<section class="flex items-center w-full h-auto md:py-40 py-10 bg-black relative z-40">
-    <div
-        class="flex flex-col md:flex-row-reverse items-center gap-4 m-auto max-w-fit"
-    >
-    <div class="flex flex-col items-start max-w-md text-left p-4">
-        <h2 class="text-yellow font-daciaBold font-bold max-w-fit whitespace-pre-line uppercase md:text-5xl md:leading-[67px] text-[2rem] leading-[45px]">MINTS</h2>      
-        <p class="text-white font-inter font-normal md:text-2xl md:leading-8 text-base leading-6">Secondary Selling Market</p>
-        <p class="text-yellow font-inter font-normal md:text-2xl md:leading-8 text-base leading-6">Bettors Sell to Bettors</p>
-        <p class="font-inter font-normal text-white md:text-xl md:leading-8 text-base leading-[22px] md:mt-4 mt-2 text-justify">Users can convert their pending sportsbook tickets into digitally certified tickets for trading on BetSell.</p>
+<section class="relative flex items-center w-full h-auto md:py-40 pt-20 pb-10 bg-black  z-40 overflow-hidden">
+    <div class="flex flex-col md:flex-row-reverse items-center gap-4 md:m-auto max-w-fit px-4">
+    <div class="flex flex-col items-start md:max-w-md text-left md:px-4 md:gap-4 gap-1">
+        <div class="flex flex-col md:gap-2 gap-1">
+            <h2 class="text-yellow font-daciaRegular font-bold md:text-5xl md:leading-[67px] text-[32px] leading-[45px] whitespace-pre-line" style="letter-spacing: -0.02em;">MINTS</h2>      
+            <div class="font-inter font-normal md:text-2xl md:leading-8 text-base leading-6">
+                <p class="text-white">Secondary Selling Market</p>
+                <p class="text-yellow">Bettors Sell to Bettors</p>
+            </div>
+        </div> 
+        <p class="font-inter font-normal text-white md:text-xl md:leading-8 text-sm leading-[22px] text-justify md:max-w-[434px]">Users can convert their pending sportsbook tickets into digitally certified tickets for trading on BetSell.</p>
     </div>
     <div class="flex-shrink-0">
         <Image src={Iphone} alt="betslip" class="h-[70vh] rounded-md shadow-md relative z-50" />
     </div>
     </div>
-    <Image src={elipse} alt="elipse" class="absolute -right-40 z-50" />
+    <Image src={elipse} alt="elipse" class="absolute -right-40 -z-50"/>
 </section>
+
