@@ -1,7 +1,8 @@
 ---
 import { Image } from "astro:assets";
 
-import HeroDesktop from "../assets/img/hero-hd.webp";
+import HeroDesktop from "../assets/img/hero.webp";
+import HeroHD from "../assets/img/hero-hd.webp";
 import elipse from "../assets/img/ellipse-hero.svg";
 ---
 
@@ -9,7 +10,7 @@ import elipse from "../assets/img/ellipse-hero.svg";
         <div class="w-1/2 flex justify-center">
             <div class="w-4/5 text-left my-auto flex flex-col">
                 <h1
-                class="font-daciaBold font-bold text-white max-w-fit whitespace-pre-line uppercase md:text-[58px] text-[2.5rem] leading-[3.125rem] md:leading-[5.625rem]" style="letter-spacing: -0.02em;"
+                class="font-daciaBold font-bold text-white max-w-fit whitespace-pre-line uppercase md:text-[3rem] text-[2.5rem] leading-[3.125rem] md:leading-[5.625rem]" style="letter-spacing: -0.02em;"
                 >The global hub for <span class="text-yellow">bet trading</span>
             </h1>
             <p class="font-inter font-normal text-white text-sm leading-[1.5rem] md:text-xl md:leading-8 md:mt-4 mt-2">
@@ -23,7 +24,7 @@ import elipse from "../assets/img/ellipse-hero.svg";
             >
             </div>
         </div>
-        <div class="w-1/2 self-center">
+        <div class="w-1/2 self-center relative">
             <Image src={HeroDesktop} alt="Bet Sell" class="w-full" />
         </div>
     <Image src={elipse} alt="elipse" class="absolute -z-50 -left-48 -top-48" />
