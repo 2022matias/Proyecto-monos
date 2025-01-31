@@ -2,10 +2,11 @@
 import { Image } from "astro:assets";
 
 import monkey3 from "../assets/img/monkeys.png";
+import monkeySm from "../assets/img/monkeys-sm.png";
 import elipse1 from "../assets/img/ellipse-monkeys.svg";
 ---
 
-<section class="relative bg-yellow flex items-center w-full max-h-[598px] md:max-h-full overflow-hidden md:h-auto md:py-0 py-10">
+<section class="relative bg-yellow flex items-center w-full md:max-h-full overflow-hidden md:h-auto md:py-0 pt-10 pb-2">
     <div class="flex md:flex-row flex-col relative max-w-[1440px] m-auto w-full justify-between z-40 md:min-h-[898px] gap-5">
         <div class="flex flex-col justify-center md:ml-7 max-w-[353px] md:max-w-[678px] gap-4 pl-2 ">
             <h2 class="font-daciaRegular font-black md:text-[60px] md:leading-[140%] text-[32px] leading-[140%]" style="letter-spacing: -0.02em;">
@@ -23,11 +24,16 @@ import elipse1 from "../assets/img/ellipse-monkeys.svg";
             >Go to Marketplace</a
         >
         </div>
-        <div class="">
+        <div class="px-2 md:px-0">
             <Image
                 src={monkey3}
                 alt="monos"
-                class="w-full h-full object-fit right-0"
+                class="hidden md:block w-full h-full object-fit right-0"
+            />
+            <Image
+                src={monkeySm}
+                alt="monos"
+                class="md:hidden block w-full h-full object-fit right-0"
             />
         </div>
         <Image src={elipse1} alt="elipse" class="absolute right-0 -z-10 bottom-0 top-0 " />
