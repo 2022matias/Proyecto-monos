@@ -16,7 +16,7 @@ import Works from "../components/Works.astro";
 
 <Layout>
 	<section class="w-full">
-		<!-- <Hero />
+		<Hero />
 		<Betslip />
 		<Ownership />
 		<Trusted />
@@ -26,56 +26,8 @@ import Works from "../components/Works.astro";
 		<Auctions />
 		<Works />
 		<TheApi />
-		<World /> -->
+		<World />
 
-		<div class="fade-in-section"><Hero /></div>
-		<div class="fade-in-section"><Betslip /></div>
-		<div class="fade-in-section"><Ownership /></div>
-		<div class="fade-in-section"><Trusted /></div>
-		<div class="fade-in-section"><Monkeys /> </div>
-		<div class="fade-in-section"><Mints /></div>
-		<div class="fade-in-section"><Shops /></div>
-		<div class="fade-in-section"><Auctions /></div>
-		<div class="fade-in-section"><Works /></div>
-		<div class="fade-in-section"><TheApi /></div>
-		<div class="fade-in-section"><World /></div>
+	
 	</section>
-
-	<style>
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-section {
-            opacity: 0;
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .fade-in-section.visible {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-    </style>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sections = document.querySelectorAll(".fade-in-section");
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    }
-                });
-            }, { threshold: 0.3 });
-
-            sections.forEach((section) => observer.observe(section));
-        });
-    </script>
 </Layout>
