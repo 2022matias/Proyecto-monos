@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets"
 import elipse from "../assets/img/ellipse-boost.svg"
+import elipseSm from "../assets/img/ellipse-boost.svg"
 
 import users2 from "../assets/img/icon-2users-group-yellow.svg"
 import users3 from "../assets/img/icon-3users-group-yellow.svg"
@@ -12,49 +13,47 @@ import Card from "./Card.astro"
 
 const info = [ 
     {
-        icon: users2,
+        icon: globe,
         title: "Break Regional Barriers",
         description: 'Gain global exposure and extend your brand’s visibility and operations beyond local or regional limits.'
     },
     {
-        icon: users3,
+        icon: controller,
         title: "Your Gaming Web3 Partner",
         description: 'BetSell’s gaming operations expertise and Web3 specialists will seamlessly guide your sportsbook into the blockchain future.'
     },
     {
-        icon: controller,
+        icon: cubes,
         title: "Access a Crypto Audience",
         description: 'Expand your reach to a growing global community of crypto bettors.'
     },
     {
-        icon: cubes,
+        icon: cash,
         title: "Offer an Innovative Cashout Alternative",
         description: 'Give players a unique way to cash out their bets while generating revenue from secondary ticket market sales.'
     },
     {
-        icon: cash,
+        icon: users3,
         title: "Attract New Users",
         description: 'Showcase your tickets to a wider audience, driving interest and acquiring new customers eager to mint or redeem tickets from your sportsbook.'
     },
     {
-        icon: globe,
+        icon: users2,
         title: "A New Way to Engage Users",
         description: 'NFT-based tickets unlock endless opportunities for innovative loyalty programs and marketing strategies.'
     },
 ]
 ---
 
-<section class="relative w-full md:min-h-[936px] grid py-10">
-    <div class="max-h-fit z-20 max-w-fit m-auto">
-        <div class=" max-w-[757px]">
-            <h2 class="text-white font-daciaBold font-bold md:text-5xl text-[2rem] whitespace-pre-line leading[140%]"> <span class="text-yellow">BOOST YOUR SPORTSBOOK’S POTENTIAL WITH US</span></h2>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 md:gap-y-14 m-auto md:mt-12">
+<section class="relative w-full m-auto md:min-h-[936px] grid py-10">
+    <Image src={elipse} alt="elipse" class="hidden md:block md:absolute z-0 top-0 left-0 w-screen"/>
+    <Image src={elipseSm} alt="elipse" class="absolute md:hidden -top-96 z-0" />
+    <div class="grid grid-cols-1 max-w-7xl w-full max-h-fit z-20 m-auto px-4 md:px-0 md:gap-[71px] gap-[28px]">
+        <h2 class="font-daciaRegular font-bold text-[#F2E900] text-[32px] md:text-5xl uppercase leading-[145%] md:leading-[145%] max-w-[781px]" style="letter-spacing: -0.02em;">BOOST YOUR SPORTSBOOK’S POTENTIAL WITH US?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 md:gap-y-14">
             {info.map((item) => (
-              <Card src={item.icon} title={item.title} description={item.description} border/>
+              <Card src={item.icon} title={item.title} description={item.description} border />
             ))}
           </div>
     </div>
-    <Image src={elipse} class="absolute right-0" alt="elipse" />
-<section/>
+</section>
