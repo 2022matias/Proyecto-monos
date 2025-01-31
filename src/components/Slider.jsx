@@ -78,7 +78,7 @@ function Slider({ slides, variant = "default" }) {
   // Clases dinámicas para el contenedor principal (por ejemplo, de la tarjeta)
   const containerClasses = isYellow
     ? "bg-[#F2E900] text-black border-none"
-    : "bg-transparent text-white";
+    : "bg-black text-white";
 
   // SVGs para botones. Si variant es yellow, usamos el nuevo SVG.
   const svgPrev = isYellow ? (
