@@ -5,18 +5,16 @@ import elipse from "../assets/img/ownership-elipse.svg"
 import world from "../assets/img/world.webp"
 ---
 
-<section class="flex items-center justify-end w-full h-auto py-10 md:py-40">
-    <div class="flex flex-col justify-between md:flex-row items-center gap-8">
-        <div class="w-2/5">
-            <Image src={world} alt="betslip" class="max-h-[80vh] rounded-md shadow-md" />
+<section class="md:relative flex flex-col-reverse md:flex-row md:h-936px py-10 pt-[100px] md:pt-0 w-[375px] md:w-[1440px] m-auto overflow-hidden">
+        <div class="static md:relative top-[-41px] left-[-321px]">
+            <Image src={world} alt="world" class="w-[375px] md:w-[1030px] rounded-md shadow-md" />
         </div>
-        <div class="flex flex-col items-start text-left p-4 w-2/5 mr-40 gap-8">
-            <h2 class="font-daciaBold font-bold text-white max-w-fit whitespace-pre-line uppercase md:text-[32px] md:leading-[67px] text-[2rem] leading-[45px]">
+        <div class="static md:absolute top-[274px] left-[683px] flex flex-col max-w-[611px] gap-3 mx-4 md:mx-0">
+            <h2 class="font-daciaRegular font-bold text-white text-[32px] leading-[44px] md:text-[48px] uppercase md:leading-[67px] whitespace-pre-line" style="letter-spacing: -0.02em;">
                 <span class="text-white">YOUR BETS ARE NOW</span> <span class="text-yellow">ACCESSIBLE</span> 
                 <span class="text-white">TO PLAYERS</span> <span class="text-yellow">WORLDWIDE</span>
             </h2>                  
-            <p class="font-inter font-normal text-white md:text-xl md:leading-8 text-base leading-[22px] md:mt-4 mt-2 text-justify">Discover a vast array of betting options across a wide range of sporting events. BetSell makes bet trading easy and secure. Whether you're aiming for a guaranteed win or looking to seize incredible deals and opportunities, this will redefine your gaming experience.</p>
+            <p class="font-inter font-normal text-white md:text-xl md:leading-8 text-sm leading-[22px] text-justify pr-0 md:pr-[74px]">Discover a vast array of betting options across a wide range of sporting events. BetSell makes bet trading easy and secure. Whether you're aiming for a guaranteed win or looking to seize incredible deals and opportunities, this will redefine your gaming experience.</p>
         </div>
-    </div>
     <Image src={elipse} alt="elipse" class="absolute -z-50 left-0" />
 </section>
