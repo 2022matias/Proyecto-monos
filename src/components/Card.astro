@@ -12,22 +12,68 @@ interface Props {
 const { src, title, description, border = false, black = false }: Props = Astro.props;
 ---
 
+<style>
+  /* Contenedor que tendrá los bordes superior e inferior personalizados */
+  .custom-dashed {
+    position: relative; /* Necesario para posicionar correctamente los pseudo-elementos */
+  }
+  .custom-dashed::before,
+  .custom-dashed::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px; /* Grosor del borde */
+    /* Definición del patrón dashed:
+       - Los primeros 4px serán del color actual (currentColor)
+       - Los siguientes 4px serán transparentes */
+    background: repeating-linear-gradient(
+      to right,
+      currentColor,
+      currentColor 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  }
+  /* Pseudo-elemento para el borde superior */
+  .custom-dashed::before {
+    top: 0;
+  }
+  /* Pseudo-elemento para el borde inferior */
+  .custom-dashed::after {
+    bottom: 0;
+  }
+</style>
+
 <div 
   class:list={{
-    'md:max-w-[345px] max-w-[337px] bg-transparent flex flex-col gap-3': true,
-    'border-y-[1px] md:py-10 py-10': border, 
-    'border-dashed': border,
-    'border-black': border && black,
-    'border-white': border && !black,
+    /* Clases base */
+    'md:max-w-[345px] max-w-[337px] bg-transparent flex flex-col gap-3 relative': true,
+    /* Aplica padding vertical si el borde está activado para evitar solapamiento */
+    'md:py-10 py-10': border,
+    /* Aplica la clase para los bordes solo si 'border' es true */
+    'custom-dashed': border,
+    /* Establece el color del borde mediante currentColor:
+       Al usar 'text-black' o 'text-white' en el contenedor, los pseudo-elementos heredan ese color */
+    'text-black': border && black,
+    'text-white': border && !black,
   }}
 >
   <Image src={src} class="md:w-9 md:h-9 w-7 h-7" alt={title} />
-  <h3 class:list={{
-    'text-white': !black,
-    'text-black': black
-  }} class="font-inter font-semibold md:text-xl text-base" style="letter-spacing: -0.02em;">{title}</h3>
-  <p class:list={{
-    'text-white': !black,
-    'text-black': black
-  }} class="font-inter text-sm text-justify">{description}</p>
+  <h3 
+    class:list={{
+      /* Los títulos mantienen su propio esquema de colores */
+      'text-white': !black,
+      'text-black': black
+    }} 
+    class="font-inter font-semibold md:text-xl text-base" 
+    style="letter-spacing: -0.02em;"
+  >{title}</h3>
+  <p 
+    class:list={{
+      'text-white': !black,
+      'text-black': black
+    }} 
+    class="font-inter text-sm text-justify"
+  >{description}</p>
 </div>

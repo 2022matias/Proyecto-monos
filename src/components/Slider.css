@@ -1,0 +1,18 @@
+/* Estilo para el botón Next inactivo */
+.swiper-button-next.swiper-button-disabled {
+  /* Opcional: ajustar opacidad o deshabilitar eventos */
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Estilo para el botón Prev inactivo (si lo necesitás) */
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+   .swiper-slide {
+    display: flex;
+    align-items: stretch; /* hace que los elementos internos se estiren verticalmente */
+    justify-content: center; /* opcional, para centrar el contenido horizontalmente */
+  }
