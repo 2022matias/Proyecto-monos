@@ -49,35 +49,23 @@ const info = [
 ];
 ---
 
-<section class="relative bg-yellow w-full  md:min-h-[936px] grid py-10">
-    <div class="max-h-fit z-20  max-w-fit m-auto">
-        <div class="max-w-[757px]">
-            <h2
-                class="text-black font-daciaBold font-bold md:text-[30px] text-[2rem] md:leading-[50px]"
-            >
-                ADDING TANGIBLE VALUE TO YOUR BETTING ASSETS
-            </h2>
-            <p class="text-black inter text-[20px]">
+
+<section class="relative w-full m-auto md:min-h-[936px] grid md:pt-[133px] md:pb-[80px] py-10 bg-yellow">
+    <Image src={elipse} alt="elipse" class="hidden md:block md:absolute z-0 top-0 left-0 w-screen"/>
+    <!-- <Image src={elipseSm} alt="elipse" class="absolute md:hidden -top-96 z-0" /> -->
+    <div class="grid grid-cols-1 max-w-7xl w-full max-h-fit z-20 m-auto px-4 md:px-0 md:gap-[71px] gap-[28px]">
+        <div class="max-w-[757px] grid grid-cols-1 md:gap-3 gap-2">
+            <h2 class="font-daciaRegular font-bold text-black text-[32px] md:text-5xl uppercase leading-[145%] md:leading-[145%] max-w-fit" style="letter-spacing: -0.02em;">ADDING TANGIBLE VALUE TO YOUR BETTING ASSETS</h2>
+            <p class="text-black font-inter md:text-base text-[14px] leading-[22px]" style="letter-spacing: -0.02em;">
                 Transforming a bet into an NFT-based digital ticket opens up new
                 avenues for engagement, revenue generation, and interactions
                 within the sports betting community.
             </p>
         </div>
-        <div
-            class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 md:gap-y-14 m-auto md:mt-12"
-        >
-            {
-                info.map((item) => (
-                    <Card
-                        src={item.icon}
-                        title={item.title}
-                        description={item.description}
-                        border
-                        black
-                    />
-                ))
-            }
-        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 md:gap-y-14">
+            {info.map((item) => (
+              <Card src={item.icon} title={item.title} description={item.description} border black />
+            ))}
+          </div>
     </div>
-    <Image src={elipse} class="absolute" alt="elipse" />
 </section>
