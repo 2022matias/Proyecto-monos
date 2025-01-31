@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 
-import Iphone from "../assets/img/Iphone12.svg";
 import elipse from "../assets/img/ellipse-mints.svg"
 ---
 
@@ -17,8 +16,11 @@ import elipse from "../assets/img/ellipse-mints.svg"
         </div> 
         <p class="font-inter font-normal text-white md:text-xl md:leading-8 text-sm leading-[22px] text-justify md:max-w-[434px]">Users can convert their pending sportsbook tickets into digitally certified tickets for trading on BetSell.</p>
     </div>
-    <div class="flex-shrink-0">
-        <Image src={Iphone} alt="betslip" class="h-[70vh] rounded-md shadow-md relative z-50" />
+    <div class="flex-shrink-0 md:w-[276px] w-[223px]">
+        <video autoplay loop muted playsinline>
+            <source src="/vid/mints.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+          </video>
     </div>
     </div>
     <Image src={elipse} alt="elipse" class="absolute -right-40 -z-50"/>
