@@ -1,90 +1,106 @@
 ---
-import { Image } from "astro:assets";
 
-import Logo from '../assets/img/betsell.svg';
 ---
 
-<nav class=" max-w-[1440px] relative flex items-center py-6 justify-between mx-auto px-4 md:px-20">
-    <!-- Logo -->
-    <Image src={Logo} alt="Bet Sell NFT Marketplace" class="w-[158px]  md:w-[266px]" />
 
-    <!-- Desktop Navigation Menu -->
-    <ul class="hidden lg:flex gap-6 items-center text-white">
-        <li>
-            <a href="/" class="hover:text-[#F2E900]">Home</a>
-        </li>
-        <li>
-            <a href="/about" class="hover:text-[#F2E900]">About</a>
-        </li>
-        <li class="bg-yellow text-black p-4 rounded-xl font-semibold hover:bg-[#D3CB11] cursor-pointer">
-            <a href="/marketplace">Go to Marketplace</a>
-        </li>
-    </ul>
+    <nav class="fixed w-full flex items-center py-6 justify-between mx-auto md:p-0 z-50 bg-black -translate-x-1/2 left-1/2">
+        <div class="max-w-[1440px] flex justify-between md:px-7 px-4 w-full md:py-5 py-0 mx-auto">
 
-    <!-- Hamburger Menu Button -->
-    <button
-        id="menu-toggle"
-        class="lg:hidden p-2 border border-white rounded-lg text-white focus:outline-none z-50"
-        aria-label="Toggle navigation"
-    >
-        <!-- Default Hamburger Icon -->
-        <svg
-            id="hamburger-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-        >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <!-- Close Icon -->
-        <svg
-            id="close-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 hidden"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-        >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-    </button>
-
-    <!-- Mobile Navigation Menu -->
-    <ul
-        id="menu"
-        class="hidden fixed inset-0 bg-black text-white flex-col items-center justify-center gap-6 p-4 lg:relative lg:inset-auto lg:bg-transparent lg:w-auto lg:h-auto lg:gap-6 lg:p-0 z-40"
-    >
-        <li class="text-center">
-            <a href="/" class="hover:text-gray-300 text-2xl">Home</a>
-        </li>
-        <li class="text-center">
-            <a href="/about" class="hover:text-gray-300 text-2xl">About</a>
-        </li>
-        <li class="bg-yellow text-black p-4 rounded-xl font-bold text-center">
-            <a href="/marketplace" class="text-2xl">Go to marketplace</a>
-        </li>
-    </ul>
-</nav>
-
-<script>
-    
-    const menuToggle = document.getElementById('menu-toggle') as HTMLElement;
-    const menu = document.getElementById('menu') as HTMLElement;
-    const hamburgerIcon = document.getElementById('hamburger-icon') as HTMLElement;
-    const closeIcon = document.getElementById('close-icon') as HTMLElement;
-
-    
-    menuToggle?.addEventListener('click', () => {
-        menu.classList.toggle('hidden'); 
-        menu.classList.toggle('flex'); 
-        hamburgerIcon.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden'); 
-
+            <!-- Logo -->
+            <img src="/betsell.png" alt="Bet Sell NFT Marketplace" class="w-[158px]  md:w-[266px]" />
         
-        document.body.classList.toggle('overflow-hidden');
-    });
-</script>
+            <!-- Desktop Navigation Menu -->
+            <ul class="hidden lg:flex gap-6 items-center text-white">
+                <li>
+                    <a href="/" class="hover:text-[#F2E900]">Home</a>
+                </li>
+                <li>
+                    <a href="/about" class="hover:text-[#F2E900]">About</a>
+                </li>
+                <li class="bg-yellow text-black p-4 rounded-xl font-semibold hover:bg-[#D3CB11] cursor-pointer">
+                    <a href="https://betsell.io/">Go to Marketplace</a>
+                </li>
+            </ul>
+        
+            <!-- Hamburger Menu Button -->
+            <button
+    id="menu-toggle"
+    class="lg:hidden p-2 border border-white rounded-lg text-white focus:outline-none z-50 absolute top-6 right-6"
+    aria-label="Toggle navigation"
+>
+                <!-- Default Hamburger Icon -->
+                <svg
+                    id="hamburger-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <!-- Close Icon -->
+                <svg
+                    id="close-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 hidden"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        
+            <!-- Mobile Navigation Menu -->
+            <ul
+                id="menu"
+                class="hidden fixed inset-0 bg-black text-white flex-col items-center justify-center gap-6 p-4 lg:relative lg:inset-auto lg:bg-transparent lg:w-auto lg:h-auto lg:gap-6 lg:p-0 z-40 h-screen"
+            >
+                <li class="text-center">
+                    <a href="/" class="hover:text-gray-300 text-2xl">Home</a>
+                </li>
+                <li class="text-center">
+                    <a href="/about" class="hover:text-gray-300 text-2xl">About</a>
+                </li>
+                <li class="bg-yellow text-black p-4 rounded-xl font-bold text-center">
+                    <a href="https://betsell.io/" class="text-2xl" target="_blank">Go to Marketplace</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const menu = document.getElementById("menu");
+            const hamburgerIcon = document.getElementById("hamburger-icon");
+            const closeIcon = document.getElementById("close-icon");
+    
+            if (menuToggle && menu && hamburgerIcon && closeIcon) {
+                menuToggle.addEventListener("click", () => {
+                    menu.classList.toggle("hidden");
+                    menu.classList.toggle("flex");
+                    hamburgerIcon.classList.toggle("hidden");
+                    closeIcon.classList.toggle("hidden");
+                    document.body.classList.toggle("overflow-hidden");
+                });
+            }
+    
+            // Detectar la ruta actual y resaltar el enlace activo
+            const currentPath = window.location.pathname.replace(/\/$/, ""); // Remueve la barra final si existe
+            const links = document.querySelectorAll("nav ul li a");
+    
+            links.forEach(link => {
+                const linkPath = link.getAttribute("href").replace(/\/$/, ""); // También normaliza los hrefs
+                if (linkPath === currentPath) {
+                    link.classList.add("text-[#F2E900]");
+                } else {
+                    link.classList.remove("text-[#F2E900]");
+                }
+            });
+        });
+    </script>
+    

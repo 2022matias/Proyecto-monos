@@ -3,64 +3,99 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
 import elipse from "../assets/img/ellipse-contact.svg";
-import CountrySelect from '../components/CountrySelect';
+import CountrySelect from "../components/CountrySelect";
+
 ---
+
 <Layout>
-    <section class="max-w-[1440px] w-full mx-auto flex flex-col items-center justify-center h-screen relative z-10">
-        <h2 class="font-daciaBold font-bold text-[24px] text-yellow text-center">
+  <section class="relative w-full pt-32 overflow-hidden">
+    <Image
+      src={elipse}
+      alt="elipse"
+      class="absolute -z-30 right-0 top-0 w-screen h-screen"
+    />
+    <div
+      class="max-w-[1440px] w-full relative z-10 flex justify-center mx-auto"
+    >
+      <div
+        class="w-[344px] md:w-[485px] h-atuo md:h-auto flex flex-col gap-6 md:gap-7 mb-[83px] md:mb-[227px]"
+      >
+        <div
+          class="w-[333px] md:w-[476px] h-auto flex flex-col gap-2 md:gap-3 md:h-auto"
+        >
+          <h2
+            class="font-daciaRegular font-bold title-gradient text-[28px] leading-[40px] md:text-[40px] uppercase md:leading-[58px] text-center"
+            style="letter-spacing: -0.02em;"
+          >
             REQUEST API ACCESS
-        </h2>                     
-        <p class="text-gray-300 font-inter font-normal text-sm text-center my-4">
-            Fill out the form to gain seamless access to our API and start building
-        </p>
-        <div class="flex flex-col justify-center items-center w-[400px] bg-[#0F1911] p-6 rounded-2xl shadow-lg relative z-50">
-            
-            <div class="w-full flex flex-col gap-3">
-                <!-- Primera fila -->
-                <div class="flex gap-2">
-                    <input
-                        type="text"
-                        class="w-1/2 bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow"
-                        placeholder="Company name"
-                    />
-                    <input
-                        type="text"
-                        class="w-1/2 bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow"
-                        placeholder="Your name"
-                    />
-                </div>
-                
-                <!-- Segunda fila -->
-                <div class="flex gap-2">
-                    <input
-                        type="text"
-                        class="w-1/2 bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow"
-                        placeholder="Title"
-                    />
-                    <CountrySelect client:visible />
-                </div>
-                
-                <!-- Tercera fila -->
-                <input
-                    type="url"
-                    class="w-full bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow"
-                    placeholder="Sportsbook URL"
-                />
-                
-                <!-- Cuarta fila -->
-                <textarea
-                    rows="4"
-                    class="w-full bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow"
-                    placeholder="Comments"
-                ></textarea>
-                
-                <button
-                    type="submit"
-                    class="w-full bg-yellow text-black font-inter font-semibold text-base rounded-lg px-4 py-3 mt-2">
-                    Send Request
-                </button>
-            </div>
+          </h2>
+          <p
+            class="font-inter font-normal text-gray-300 md:text-base md:leading-6 text-sm leading-[22px] px-7 text-center"
+          >
+            Fill out the form to gain seamless access to our api’s and start
+            building
+          </p>
         </div>
-        <Image src={elipse} alt="elipse" class="absolute -z-30 right-0 top-0 w-full"  />
-    </section>
+        <div
+          class="flex flex-col justify-center items-center w-[344px] md:w-[485px] h-[444px] md:h-[404px] bg-[#0F1911] p-6 rounded-2xl shadow-lg relative z-50"
+        >
+          <form class="w-full flex flex-col gap-3">
+            <!-- Primera fila -->
+            <div class="flex flex-col md:flex-row gap-2">
+              <input
+                type="text"
+                class="w-full md:w-1/2 bg-transparent border-[0.5px] border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow"
+                placeholder="Company name"
+              />
+              <input
+                type="text"
+                class="w-full md:w-1/2 bg-transparent border-[0.5px] border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow"
+                placeholder="Your name"
+              />
+            </div>
+
+            <!-- Segunda fila -->
+            <div class="flex gap-2">
+              <input
+                type="text"
+                class="w-1/2 bg-transparent border-[0.5px] border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow"
+                placeholder="Title"
+              />
+              <CountrySelect client:visible />
+            </div>
+
+            <!-- Tercera fila -->
+            <input
+              type="url"
+              class="w-full bg-transparent border-[0.5px] border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow"
+              placeholder="Sportsbook URL"
+            />
+
+            <!-- Cuarta fila -->
+            <textarea
+              rows="4"
+              class="w-full bg-transparent border-[0.5px] border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow"
+              placeholder="Comments"
+            ></textarea>
+
+            <button
+              type="submit"
+              class="w-full bg-yellow text-black font-inter font-semibold text-base rounded-lg px-4 py-3 mt-2"
+            >
+              Send Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .title-gradient {
+    background: linear-gradient(to bottom, white, #f2e900);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+</style>

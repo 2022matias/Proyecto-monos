@@ -58,8 +58,8 @@ function Slider({ slides, variant = "default" }) {
             spaceBetween: 40,
           },
           1024: {
-            slidesPerView: 1,
-            slidesPerGroup: 4,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
             spaceBetween: 50,
           },
         },
@@ -182,7 +182,7 @@ function Slider({ slides, variant = "default" }) {
                     >
                       {item.title}
                     </h3>
-                    <p className="font-inter text-sm text-justify max-w-[270px]">
+                    <p className="font-inter text-sm text-left max-w-[270px]">
                       {item.description}
                     </p>
                   </div>

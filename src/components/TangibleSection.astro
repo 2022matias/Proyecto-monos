@@ -52,12 +52,12 @@ const info = [
 ---
 
 
-<section class="relative w-full m-auto md:min-h-[936px] grid md:pt-[133px] md:pb-[80px] py-10 md:bg-yellow">
+<section class="relative w-full m-auto md:min-h-[936px] grid md:py-[133px] py-10 md:bg-yellow">
     <Image src={elipse} alt="elipse" class="hidden md:block md:absolute z-0 -top-10 w-screen"/>
     <div class="grid grid-cols-1 max-w-7xl w-full max-h-fit z-20 m-auto px-4 md:px-0 md:gap-[71px]">
         <div class="max-w-[757px] grid grid-cols-1 md:gap-3 gap-2">
-            <h2 class="font-daciaRegular font-bold md:text-black text-[32px] md:text-5xl uppercase leading-[145%] md:leading-[145%] max-w-fit text-white md:text-left text-center" style="letter-spacing: -0.02em;">ADDING TANGIBLE <span class="text-yellow md:text-black">VALUE</span> TO YOUR BETTING ASSETS</h2>
-            <p class="md:text-black text-white font-inter md:text-base text-[14px] leading-[22px] md:text-left text-center" style="letter-spacing: -0.02em;">
+            <h2 class="font-daciaRegular font-bold md:text-black text-[32px] md:text-5xl uppercase leading-[145%] md:leading-[145%] max-w-fit text-white text-left" style="letter-spacing: -0.02em;">ADDING TANGIBLE <span class="text-yellow md:text-black">VALUE</span> TO YOUR BETTING ASSETS</h2>
+            <p class="md:text-black text-white font-inter md:text-base text-[14px] leading-[22px] text-left" style="letter-spacing: -0.02em;">
                 Transforming a bet into an NFT-based digital ticket opens up new
                 avenues for engagement, revenue generation, and interactions
                 within the sports betting community.
@@ -68,7 +68,7 @@ const info = [
         </div>
         <div class="hidden md:grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 md:gap-y-14">
             {info.map((item) => (
-              <Card src={item.icon} title={item.title} description={item.description} border black />
+              <Card src={item.icon} title={item.title} description={item.description} black />
             ))}
           </div>
     </div>

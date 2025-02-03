@@ -25,12 +25,21 @@ const CountrySelect = () => {
                 className="w-full text-black"
                 placeholder="Country"
                 styles={{
-                    control: (provided) => ({
+                    control: (provided, state) => ({
                         ...provided,
                         borderRadius: '8px',
-                        borderColor: 'gray',
+                        borderColor: state.isFocused ? 'yellow' : '#4b5563',
                         boxShadow: 'none',
                         padding: '2px',
+                        backgroundColor: '[#0F1911]',
+                        boxShadow: state.isFocused ? '0 0 0 0.5px yellow' : 'none',
+                        '&:hover': {
+                            borderColor: state.isFocused ? 'yellow' : '#4b5563',
+                        },
+                    }),
+                    singleValue: (provided) => ({
+                        ...provided,
+                        color: 'white',
                     }),
                     menu: (provided) => ({
                         ...provided,

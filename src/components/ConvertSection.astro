@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import diamond from "../assets/img/diamond.svg"
-import blockchain from "../assets/img/blockchain.svg"
-import cube from "../assets/img/ion_cube.svg"
-import market from "../assets/img/market.svg"
-import money from "../assets/img/money-bag.svg"
-import ticket from "../assets/img/ticket.svg"
+import diamond from "../assets/img/icon-diamond-black.svg"
+import blockchain from "../assets/img/icon-blockchain-black.svg"
+import cube from "../assets/img/icon-cube-black.svg"
+import market from "../assets/img/icon-market-black.svg"
+import money from "../assets/img/icon-moneybag-black.svg"
+import ticket from "../assets/img/icon-ticket-black.svg"
 import Card from "./Card.astro"
 
 import elipse from "../assets/img/ellipse-convert.svg"
@@ -47,17 +47,17 @@ const info = [
 ---
 
 
-<section class="relative w-full m-auto md:min-h-[936px] grid py-10">
+<section class="relative w-full m-auto md:min-h-[936px] grid py-10 md:pt-2 md:pb-12 md:bg-yellow overflow-hidden">
     <Image src={elipse} alt="elipse" class="hidden md:block md:absolute z-0 top-0 left-0 w-screen"/>
     <Image src={elipseSm} alt="elipse" class="absolute md:hidden -top-96 z-0" />
     <div class="grid grid-cols-1 max-w-7xl max-h-fit z-20 m-auto px-4 md:px-0 md:gap-[71px]">
-        <h2 class="font-daciaRegular font-bold text-white text-[32px] md:text-5xl uppercase leading-[145%] md:leading-[145%] max-w-fit" style="letter-spacing: -0.02em;">WHY <span class="text-yellow">CONVERT</span> YOUR BETS INTO DIGITAL CERTIFIED TICKETS?</h2>
+        <h2 class="font-daciaRegular font-bold md:text-black text-white text-[32px] md:text-5xl uppercase leading-[145%] md:leading-[145%] max-w-fit" style="letter-spacing: -0.02em;">WHY <span class="text-yellow md:text-black">CONVERT</span> YOUR BETS INTO DIGITAL CERTIFIED TICKETS?</h2>
         <div class="w-full md:hidden block">
-            <Slider slides={info} client:visible />
+            <Slider slides={info} client:visible variant="yellow"/>
         </div>
         <div class="hidden md:grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 md:gap-y-14">
             {info.map((item) => (
-              <Card src={item.icon} title={item.title} description={item.description} />
+              <Card src={item.icon} title={item.title} description={item.description} black />
             ))}
           </div>
     </div>
