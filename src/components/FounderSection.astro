@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 
 import Ramirez from "../assets/img/Ramirez.svg";
-import Sandi from "../assets/img/Sandl.svg";
+import Sandi from "../assets/img/sandi.png";
 import linkedIn from "../assets/img/linkedIn-founders.svg";
 import elipse from "../assets/img/ellipse-us.svg"
 import elipseSm from "../assets/img/ellipse-us.svg"
@@ -18,26 +18,29 @@ import elipseSm from "../assets/img/ellipse-us.svg"
         
         <div class="grid grid-cols-2 md:gap-10 gap-[14px]">
             <div class="grid grid-cols-1 md:gap-5 gap-[14px] text-white max-h-[401px]">
-                <Image src={Ramirez} alt="Aramis Ramirez" class="rounded-lg md:w-[224px] w-[162px]" />
+                <Image src={Ramirez} alt="Aramis Ramirez" class="rounded-lg md:w-[224px] md:h-[226px] h-[163.44px] w-[162px]" />
                 <div class="grid grid-cols-1 gap-2">
                     <h3 class="font-daciaRegular font-bold md:text-[20px] md:leading-[130%] text-[14px] leading-[130%" style="letter-spacing: -0.02em;">Aramis Ramírez</h3>
                     <p class="font-inter md:text-base md:leading-[130%] text-[12px] leading-[130%]" style="letter-spacing: -0.02em;">CEO & CO FOUNDER</p>
                 </div>
                 <div class="border-y border-dashed border-white flex justify-between items-center py-6">
                     <p class="font-inter md:text-base md:leading-[130%] text-[12px] leading-[130%]" style="letter-spacing: -0.02em;">Betting Operator</p>
-                    <Image src={linkedIn} alt="linkedIn logo" class="w-[20px] md:w-[28px]" />
+                    <a href="https://www.linkedin.com/in/aramis-ramirez-99838a152/" target="_blank">
+                        <Image src={linkedIn} alt="linkedIn logo" class="w-[20px] md:w-[28px]" />
+
+                    </a>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:gap-5 gap-[14px] text-white max-h-[401px]">
-                <Image src={Sandi} alt="Aramis Ramirez" class="rounded-lg md:w-[224px] w-[162px]" />
+                <Image src={Sandi} alt="Aramis Ramirez" class="rounded-lg md:w-[224px] md:h-[226px] h-[163.44px] w-[162px]" />
                 <div class="grid grid-cols-1 gap-2">
                     <h3 class="font-daciaRegular font-bold md:text-[20px] md:leading-[130%] text-[14px] leading-[130%]" style="letter-spacing: -0.02em;">Jafett Sandi</h3>
                     <p class="font-inter md:text-base md:leading-[130%] text-[12px] leading-[130%]" style="letter-spacing: -0.02em;">CTO & CO FOUNDER</p>
                 </div>
                 <div class="border-y border-dashed border-white flex justify-between items-center py-6">
                     <p class="font-inter md:text-base md:leading-[130%] text-[12px] leading-[130%]" style="letter-spacing: -0.02em;">Engineering Architect</p>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/jafettsandi/" target="_blank">
                         <Image src={linkedIn} alt="linkedIn logo" class="w-[20px] md:w-[28px]" />
 
                     </a>

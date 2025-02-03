@@ -5,8 +5,19 @@ import { Image } from "astro:assets";
 import elipse from "../assets/img/ellipse-contact.svg";
 import CountrySelect from "../components/CountrySelect";
 
+let selectedCountry = "";
 ---
 
+
+
+<head>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('R2Ozv3-i2regffNC2')
+  </script>
+</head>
 <Layout>
   <section class="relative w-full pt-32 overflow-hidden">
     <Image
@@ -32,22 +43,27 @@ import CountrySelect from "../components/CountrySelect";
           <p
             class="font-inter font-normal text-gray-300 md:text-base md:leading-6 text-sm leading-[22px] px-7 text-center"
           >
-            Fill out the form to gain seamless access to our api’s and start
+            Fill out the form to gain seamless access to our api's and start
             building
           </p>
         </div>
         <div
           class="flex flex-col justify-center items-center w-[344px] md:w-[485px] h-[444px] md:h-[404px] bg-[#0F1911] p-6 rounded-2xl shadow-lg relative z-50"
         >
-          <form class="w-full flex flex-col gap-3">
+          <form class="w-full flex flex-col gap-3" id="form">
             <!-- Primera fila -->
-            <div class="flex flex-col md:flex-row gap-2">
+            <div class="field flex flex-col md:flex-row gap-2">
+              <label for="to_name" class="hidden">to_name</label>
               <input
                 type="text"
+                type="text" name="to_name" id="to_name"
                 class="w-full md:w-1/2 bg-transparent border-[0.5px] border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow"
                 placeholder="Company name"
               />
+              <label for="user_name" class="hidden">company_name</label>
               <input
+                name="user_name"
+                id="user_name"
                 type="text"
                 class="w-full md:w-1/2 bg-transparent border-[0.5px] border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow"
                 placeholder="Your name"
@@ -61,29 +77,36 @@ import CountrySelect from "../components/CountrySelect";
                 class="w-1/2 bg-transparent border-[0.5px] border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow"
                 placeholder="Title"
               />
-              <CountrySelect client:visible />
+              <CountrySelect client:only="react" />
+              <label for="user_country" class="hidden">user_country</label>
+              <input class="hidden" type="hidden" name="user_country" id="countryInput" value="" />
             </div>
 
             <!-- Tercera fila -->
+            <label for="user_email" class="hidden">sportsbook_url</label>
             <input
               type="url"
+              name="user_email"
+              id="user_email"
               class="w-full bg-transparent border-[0.5px] border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow"
               placeholder="Sportsbook URL"
             />
 
             <!-- Cuarta fila -->
+            <label for="message" class="hidden">message</label>
             <textarea
               rows="4"
+              name="message" id="message"
               class="w-full bg-transparent border-[0.5px] border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow"
               placeholder="Comments"
             ></textarea>
 
-            <button
+            <input
               type="submit"
+              id="button" value="Send Request"
               class="w-full bg-yellow text-black font-inter font-semibold text-base rounded-lg px-4 py-3 mt-2"
             >
-              Send Request
-            </button>
+            </input>
           </form>
         </div>
       </div>
@@ -99,3 +122,47 @@ import CountrySelect from "../components/CountrySelect";
     text-fill-color: transparent;
   }
 </style>
+
+
+<script>
+  //@ts-nocheck 
+
+  window.addEventListener("countrySelected", (event) => {
+  console.log("País seleccionado en Astro:", event.detail);
+
+  // Wait until the element is present before modifying it
+  setTimeout(() => {
+    const countryInput = document.getElementById("countryInput");
+    if (countryInput) {
+      countryInput.value = event.detail;
+    } else {
+      console.error("El campo oculto countryInput no existe en el DOM.");
+    }
+  }, 100); // Small delay to ensure the input exists
+});
+
+  const btn = document.getElementById('button');
+
+  document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const btn = document.getElementById('button');
+    btn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_acwd5pc';
+
+    const formData = new FormData(this);
+    formData.append("country", document.getElementById("countryInput").value);
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.value = 'Send Email';
+        alert('Sent!');
+      })
+      .catch((err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+      });
+  });
+</script>
